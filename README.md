@@ -1,5 +1,7 @@
 # pleiadesHRlab
-ASTRO 101 student lab making an HR diagram for the Pleiades star cluster
+## ASTRO 101 student lab making an HR diagram for the Pleiades star cluster
+
+To see this page rendered via github pages, visit <https://krislars.github.io/pleiadesHRlab/>
 
 The lab has two parts:
 1. page where students [select stars and make observations here](Pleiades.html) 
