@@ -1,0 +1,72 @@
+<html>
+
+<head>
+
+<link rel='stylesheet' href='https://aladin.u-strasbg.fr/AladinLite/api/v2/latest/aladin.min.css' />
+
+</head>
+
+<body>
+
+<h1>Pleiades Star Cluster</h1>
+<h3>HR Diagram Lab by Kristen Larson (Western Washington University)</h3>
+
+Hover over a star and record the temperature and luminosity shown here:
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js" charset="utf-8"></script>
+
+<div id='infoDiv'>&nbsp; </div>
+<div id='aladin-lite-div' style='width: 500px;height: 500px;'></div>
+
+<script type='text/javascript' src='https://aladin.u-strasbg.fr/AladinLite/api/v2/latest/aladin.min.js' charset='utf-8'></script>
+
+<script type="text/javascript">
+	var aladin = A.aladin('#aladin-lite-div', {target: 'M 45', fov: 3, showReticle: false});
+
+	aladin.addCatalog(A.catalogFromVizieR('J/A+A/577/A148/dancep&Pmb=%3E0.95', 'M 45', 1.5, {onClick: 'showPopup'}));
+	aladin.addCatalog(A.catalogFromVizieR('J/A+A/577/A148/dancept&Pmb=%3E0.95', 'M 45', 1.5, {onClick: 'showPopup'}));
+
+	aladin.on('objectHovered', function(object) {
+    		var msg;
+    		if (object) {
+			var lumin = object.data.Lbol;
+        		msg = 'Star: Temperature = ' + object.data.Teff + ' K, Luminosity = ' + Number(lumin) + ' L_sun';
+    		}
+    		else {
+        		msg = 'No object hovered';
+    		}
+    		$('#infoDiv').html(msg);
+	});
+</script>
+
+Or, click on a star and scroll to the bottom of the data popup to find temperature (Teff, in Kelvin)
+and luminosity (Lbol, in solar units).
+
+
+
+<br>
+
+
+<br>
+
+<br>
+
+<br>
+
+<h3>Reference:</h3> <br>
+Data are from the paper <a href="https://www.aanda.org/articles/aa/abs/2015/05/aa25019-14/aa25019-14.html">
+The Seven Sisters DANCe by Bouy et al. (2015)</a>
+
+Objects shown belong to the star cluster with 95 percent probability.  Green symbols are 
+from the second release of the DANCe-Pleiades survey, and blue symbols are from the 
+Tycho-2 catalog.
+
+There are many published studies of the Pleiades star cluster, but we chose this one
+because it includes temperature and luminosity in solar units in the <a 
+href="https://vizier.cfa.harvard.edu/viz-bin/VizieR?-source=J/A+A/577/A148">published catalog 
+available online</a>.  Many thanks to Bouy et al!
+
+
+</body>
+
+</html>
