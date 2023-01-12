@@ -1,4 +1,4 @@
-# pleiadesHRlab
+# PleiadesHRlab
 ## ASTRO 101 student lab making an HR diagram for the Pleiades star cluster
 
 To see this page rendered via github pages, visit <https://krislars.github.io/PleiadesHRlab/>
