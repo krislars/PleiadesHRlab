@@ -18,3 +18,5 @@ https://docs.google.com/spreadsheets/d/1q-FHZ0XBOFdSdVLwLBQKaTP9XjQjtGV9G_KCNwJG
 then Google will prompt the student to save a copy in their own Google drive.
 
 If you would like to contribute to the project, join me at <https://github.com/krislars/pleiadesHRlab>
+
+Kristen Larson krislars@gmail.com
